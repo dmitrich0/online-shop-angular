@@ -11,6 +11,7 @@ import {ProductsService} from "../../services/products.service";
 export class ProductsComponent implements OnInit {
   products!: IProducts[];
   productsSubscription!: Subscription;
+  canEdit!: boolean;
 
   constructor(private productsService: ProductsService) {
   }
@@ -18,7 +19,8 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.productsSubscription = this.productsService.getProducts().subscribe(data => {
       this.products = data;
-    })
+    });
+    this.canEdit = true;
   }
 
   ngOnDestroy() {
