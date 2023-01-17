@@ -32,6 +32,13 @@ export class ProductsComponent implements OnInit {
     dialogConfig.height = '400px';
     dialogConfig.disableClose = true;
     const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(data => {
+      this.postData(data)
+    })
+  }
+
+  postData(data: IProducts) {
+    this.productsService.postProduct(data).subscribe(data => this.products.push(data));
   }
 
   ngOnDestroy() {

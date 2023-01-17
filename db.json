@@ -38,6 +38,32 @@
         "memory": "16 GB",
         "display": "Retina"
       }
+    },
+    {
+      "title": "Redmi Note 8 PRO",
+      "price": "2000",
+      "year": "2022",
+      "image": "assets/images/macbook.png",
+      "configure": {
+        "chip": "M1",
+        "SSD": "256 GB",
+        "memory": "1024 GB",
+        "display": "Retina"
+      },
+      "id": 4
+    },
+    {
+      "title": "",
+      "price": "asdasd",
+      "year": "asd",
+      "image": "assets/images/macbook.png",
+      "configure": {
+        "chip": "",
+        "SSD": "",
+        "memory": "",
+        "display": ""
+      },
+      "id": 5
     }
   ]
 }

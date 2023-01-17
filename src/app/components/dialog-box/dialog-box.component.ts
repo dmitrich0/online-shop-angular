@@ -28,6 +28,18 @@ export class DialogBoxComponent {
   }
 
   onSubmit() {
-    this.onNoClick();
+    this.data = {
+      title: this.myForm.value.title,
+      price: this.myForm.value.price,
+      year: this.myForm.value.year,
+      image: "assets/images/macbook.png",
+      configure: {
+        chip: this.myForm.value.chip,
+        SSD: this.myForm.value.SSD,
+        memory: this.myForm.value.memory,
+        display: this.myForm.value.display,
+      }
+    }
+    this.dialogRef.close(this.data);
   }
 }
